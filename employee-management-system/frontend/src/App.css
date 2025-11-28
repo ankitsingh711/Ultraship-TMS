@@ -1,9 +1,29 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+.grid-layout {
+  gap: var(--spacing-lg);
+}
+
+body {
+  font-family: 'Inter', 'Outfit', sans-serif;
+  font-size: 16px;
+} 
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+
 
 .logo {
   height: 6em;
