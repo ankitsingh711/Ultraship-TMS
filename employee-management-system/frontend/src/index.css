@@ -1,5 +1,6 @@
 /* Tailwind CSS v4 */
 @import "tailwindcss";
+/* Force HMR update */
 
 /* Minimal reset - design-system.css handles most styling */
 #root {

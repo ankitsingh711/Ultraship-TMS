@@ -101,9 +101,9 @@ const Dashboard = () => {
         <div className="min-h-screen bg-background pb-12">
             <HorizontalMenu />
 
-            <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
+            <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 animate-fade-in">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12 animate-fade-in">
                     <div>
                         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
                             <span className="text-gradient-vibrant">Employee Directory</span>
@@ -141,10 +141,12 @@ const Dashboard = () => {
                     />
                 )}
 
-                <Filters filter={filter} onFilterChange={(newFilter) => {
-                    setFilter(newFilter);
-                    setPage(1);
-                }} />
+                <div className="mb-8">
+                    <Filters filter={filter} onFilterChange={(newFilter) => {
+                        setFilter(newFilter);
+                        setPage(1);
+                    }} />
+                </div>
 
                 {loading ? (
                     <div className="flex flex-col items-center justify-center h-96 animate-fade-in">

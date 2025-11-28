@@ -106,29 +106,29 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="min-h-screen flex items-center justify-center p-8 sm:p-16 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             <div className="absolute inset-0 overflow-hidden opacity-30">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
             </div>
 
-            <div className="glass-panel-light w-full max-w-md animate-fade-in relative z-10 border border-white/10">
+            <div className="glass-panel-light w-full max-w-lg animate-fade-in relative z-10 border border-white/10 shadow-2xl">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
 
-                <div className="p-8">
-                    <div className="text-center mb-8">
-                        <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-2xl bg-blue-500 shadow-lg shadow-blue-500/50">
-                            <Building2 className="w-8 h-8 text-white" />
+                <div className="p-12 sm:p-16">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-2xl bg-blue-500 shadow-lg shadow-blue-500/50">
+                            <Building2 className="w-10 h-10 text-white" />
                         </div>
-                        <h1 className="text-3xl font-bold mb-2 text-white">
+                        <h1 className="text-4xl font-bold mb-4 text-white">
                             {isLogin ? 'Welcome Back' : 'Create Account'}
                         </h1>
-                        <p className="text-gray-400">
+                        <p className="text-gray-400 text-xl">
                             {isLogin ? 'Sign in to access your dashboard' : 'Join us to get started'}
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={handleSubmit} className="space-y-8">
                         <div className="space-y-4">
                             <div className="relative">
                                 <label className="block text-sm font-medium mb-2 text-gray-300">

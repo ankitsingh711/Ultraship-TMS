@@ -45,10 +45,10 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                 />
                                 <div className="absolute -bottom-2 -right-2 z-20">
                                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-lg ${employee.attendance >= 90
-                                            ? 'bg-emerald-500'
-                                            : employee.attendance >= 75
-                                                ? 'bg-yellow-500'
-                                                : 'bg-red-500'
+                                        ? 'bg-emerald-500'
+                                        : employee.attendance >= 75
+                                            ? 'bg-yellow-500'
+                                            : 'bg-red-500'
                                         }`}>
                                         <Award className="w-4 h-4 text-white" />
                                     </div>
@@ -95,12 +95,12 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-6">
-                            <div className="p-5 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-4 backdrop-blur-sm hover:border-primary/30 transition-colors">
-                                <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                                    <Mail className="w-4 h-4 text-primary" />
+                            <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-6 backdrop-blur-sm hover:border-primary/30 transition-colors">
+                                <h3 className="text-base font-bold text-white uppercase tracking-wider flex items-center gap-3 border-b border-white/10 pb-4">
+                                    <Mail className="w-5 h-5 text-primary" />
                                     Contact Information
                                 </h3>
-                                <div className="space-y-3">
+                                <div className="space-y-5">
                                     <div className="flex items-center gap-3 text-gray-200 group">
                                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                                             <Mail className="w-4 h-4 text-primary" />
@@ -131,19 +131,19 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                 </div>
                             </div>
 
-                            <div className="p-5 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-4 backdrop-blur-sm hover:border-success/30 transition-colors">
-                                <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                                    <Clock className="w-4 h-4 text-success" />
+                            <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-6 backdrop-blur-sm hover:border-success/30 transition-colors">
+                                <h3 className="text-base font-bold text-white uppercase tracking-wider flex items-center gap-3 border-b border-white/10 pb-4">
+                                    <Clock className="w-5 h-5 text-success" />
                                     Performance Metrics
                                 </h3>
-                                <div className="space-y-3">
+                                <div className="space-y-4">
                                     <div className="flex items-center justify-between">
                                         <span className="text-gray-400 text-sm">Attendance Rate</span>
                                         <span className={`font-bold text-lg ${employee.attendance >= 90
-                                                ? 'text-green-400'
-                                                : employee.attendance >= 75
-                                                    ? 'text-yellow-400'
-                                                    : 'text-red-400'
+                                            ? 'text-green-400'
+                                            : employee.attendance >= 75
+                                                ? 'text-yellow-400'
+                                                : 'text-red-400'
                                             }`}>
                                             {employee.attendance}%
                                         </span>
@@ -151,10 +151,10 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                     <div className="w-full bg-gray-700/50 rounded-full h-3 overflow-hidden border border-white/10">
                                         <div
                                             className={`h-3 rounded-full transition-all duration-500 ${employee.attendance >= 90
-                                                    ? 'bg-emerald-500'
-                                                    : employee.attendance >= 75
-                                                        ? 'bg-yellow-500'
-                                                        : 'bg-red-500'
+                                                ? 'bg-emerald-500'
+                                                : employee.attendance >= 75
+                                                    ? 'bg-yellow-500'
+                                                    : 'bg-red-500'
                                                 }`}
                                             style={{ width: `${employee.attendance}%` }}
                                         />
@@ -164,12 +164,12 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                         </div>
 
                         <div className="space-y-6">
-                            <div className="p-5 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-4 h-full backdrop-blur-sm hover:border-cyan-500/30 transition-colors">
-                                <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                                    <BookOpen className="w-4 h-4 text-warning" />
+                            <div className="p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-6 h-full backdrop-blur-sm hover:border-cyan-500/30 transition-colors">
+                                <h3 className="text-base font-bold text-white uppercase tracking-wider flex items-center gap-3 border-b border-white/10 pb-4">
+                                    <BookOpen className="w-5 h-5 text-warning" />
                                     Academic Details
                                 </h3>
-                                <div className="space-y-4">
+                                <div className="space-y-6">
                                     <div className="flex items-center gap-3 text-gray-200">
                                         <Calendar className="w-4 h-4 text-blue-400" />
                                         <span className="text-sm">

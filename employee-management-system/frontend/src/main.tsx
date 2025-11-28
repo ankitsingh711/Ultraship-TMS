@@ -5,8 +5,8 @@ import { ApolloProvider } from '@apollo/client'
 import App from './App'
 import { client } from './apollo/client'
 import { AuthProvider } from './context/AuthContext'
-import './index.css'
 import './styles/design-system.css'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
