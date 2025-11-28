@@ -262,46 +262,6 @@ const LoginPage = () => {
                             </span>
                         </button>
                     </div>
-
-                    <div className="mt-8 pt-6 border-t border-white/10">
-                        <p className="text-xs text-center text-gray-400 mb-4 font-semibold uppercase tracking-wider">
-                            Demo Credentials
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                            <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-colors">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <div className="w-6 h-6 rounded-md bg-blue-500/20 flex items-center justify-center">
-                                        <User className="w-3.5 h-3.5 text-blue-400" />
-                                    </div>
-                                    <span className="font-semibold text-blue-400">Admin</span>
-                                </div>
-                                <div className="space-y-1">
-                                    <div className="font-mono text-[10px] px-2 py-1 rounded bg-black/20 text-gray-400">
-                                        admin@example.com
-                                    </div>
-                                    <div className="font-mono text-[10px] px-2 py-1 rounded bg-black/20 text-gray-400">
-                                        password123
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <div className="w-6 h-6 rounded-md bg-cyan-500/20 flex items-center justify-center">
-                                        <User className="w-3.5 h-3.5 text-cyan-400" />
-                                    </div>
-                                    <span className="font-semibold text-cyan-400">Employee</span>
-                                </div>
-                                <div className="space-y-1">
-                                    <div className="font-mono text-[10px] px-2 py-1 rounded bg-black/20 text-gray-400">
-                                        employee@example.com
-                                    </div>
-                                    <div className="font-mono text-[10px] px-2 py-1 rounded bg-black/20 text-gray-400">
-                                        password123
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
