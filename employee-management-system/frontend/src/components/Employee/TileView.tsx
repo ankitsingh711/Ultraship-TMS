@@ -22,7 +22,7 @@ const TileView: React.FC<TileViewProps> = ({ employees, onEmployeeClick, onEdit,
                     style={{ animationDelay: `${index * 50}ms` }}
                 >
                     {/* Decorative elements */}
-                    <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-secondary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -35,7 +35,7 @@ const TileView: React.FC<TileViewProps> = ({ employees, onEmployeeClick, onEdit,
 
                     <div className="flex flex-col items-center text-center pt-4 pb-2 relative z-10">
                         <div className="relative mb-4 group/avatar">
-                            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl blur-xl opacity-30 group-hover/avatar:opacity-60 transition-opacity" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover/avatar:opacity-40 transition-opacity" />
                             <div className="relative">
                                 <img
                                     src={employee.photoUrl || `https://ui-avatars.com/api/?name=${employee.name}&background=random`}
@@ -44,10 +44,10 @@ const TileView: React.FC<TileViewProps> = ({ employees, onEmployeeClick, onEdit,
                                 />
                                 <div className="absolute -bottom-2 -right-2 z-20">
                                     <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold shadow-lg ${employee.attendance >= 90
-                                            ? 'bg-gradient-to-br from-green-500 to-emerald-400 text-white'
+                                            ? 'bg-emerald-500 text-white'
                                             : employee.attendance >= 75
-                                                ? 'bg-gradient-to-br from-yellow-500 to-amber-400 text-white'
-                                                : 'bg-gradient-to-br from-red-500 to-pink-400 text-white'
+                                                ? 'bg-yellow-500 text-white'
+                                                : 'bg-red-500 text-white'
                                         }`}>
                                         <TrendingUp className="w-3 h-3" />
                                     </div>
@@ -98,10 +98,10 @@ const TileView: React.FC<TileViewProps> = ({ employees, onEmployeeClick, onEdit,
                                 <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-white/10">
                                     <div
                                         className={`h-2 rounded-full transition-all duration-500 ${employee.attendance >= 90
-                                                ? 'bg-gradient-to-r from-green-500 to-emerald-400'
+                                                ? 'bg-emerald-500'
                                                 : employee.attendance >= 75
-                                                    ? 'bg-gradient-to-r from-yellow-500 to-amber-400'
-                                                    : 'bg-gradient-to-r from-red-500 to-pink-400'
+                                                    ? 'bg-yellow-500'
+                                                    : 'bg-red-500'
                                             }`}
                                         style={{ width: `${employee.attendance}%` }}
                                     />

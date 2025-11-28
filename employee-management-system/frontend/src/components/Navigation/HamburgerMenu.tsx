@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X, ChevronRight, Home, Users, Settings, LogOut, Sparkles } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
@@ -35,10 +35,10 @@ const HamburgerMenu = () => {
                 {/* Header */}
                 <div className="p-4 flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-primary/10 to-transparent">
                     <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
                             <Sparkles className="w-4 h-4 text-white" />
                         </div>
-                        <span className="font-bold text-xl text-gradient-vibrant">EMS Portal</span>
+                        <span className="font-bold text-xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">EMS Portal</span>
                     </div>
                     <button onClick={() => setIsOpen(false)} className="btn-icon hover:rotate-90 transition-transform">
                         <X className="w-5 h-5" />
@@ -48,7 +48,7 @@ const HamburgerMenu = () => {
                 {/* User Profile */}
                 <div className="p-4 border-b border-white/10">
                     <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-white/5 to-transparent border border-white/10">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-white shadow-lg">
                             {user?.email[0].toUpperCase()}
                         </div>
                         <div className="overflow-hidden flex-1">

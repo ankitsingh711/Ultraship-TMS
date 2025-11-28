@@ -12,7 +12,7 @@ interface GridViewProps {
 
 const GridView: React.FC<GridViewProps> = ({ employees, onEmployeeClick, onEdit, onDelete, onFlag }) => {
     return (
-        <div className="glass-panel-light overflow-hidden shadow-xl border border-white/10">
+        <div className="glass-panel-light overflow-hidden shadow-lg border border-white/10 rounded-xl">
             <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                     <thead>
@@ -73,10 +73,10 @@ const GridView: React.FC<GridViewProps> = ({ employees, onEmployeeClick, onEdit,
                                         <div className="w-20 bg-gray-700/50 rounded-full h-2 overflow-hidden border border-white/10">
                                             <div
                                                 className={`h-2 rounded-full transition-all duration-500 ${employee.attendance >= 90
-                                                    ? 'bg-gradient-to-r from-green-500 to-emerald-400'
+                                                    ? 'bg-emerald-500'
                                                     : employee.attendance >= 75
-                                                        ? 'bg-gradient-to-r from-yellow-500 to-amber-400'
-                                                        : 'bg-gradient-to-r from-red-500 to-pink-400'
+                                                        ? 'bg-yellow-500'
+                                                        : 'bg-red-500'
                                                     }`}
                                                 style={{ width: `${employee.attendance}%` }}
                                             />

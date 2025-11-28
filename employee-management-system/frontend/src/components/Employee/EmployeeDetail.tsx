@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Mail, Briefcase, MapPin, Calendar, BookOpen, Clock, Edit, Trash2, Flag, Phone, Award } from 'lucide-react';
+import { X, Mail, Briefcase, MapPin, Calendar, BookOpen, Clock, Edit, Trash2, Flag, Award } from 'lucide-react';
 import type { Employee } from '../../types';
 import { useAuth } from '../../context/AuthContext';
 
@@ -23,7 +23,7 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
 
             <div className="relative w-full max-w-3xl glass-panel-light animate-scale-in overflow-hidden border border-white/20 shadow-2xl">
                 {/* Header with gradient cover */}
-                <div className="h-36 bg-gradient-to-r from-primary via-secondary to-accent relative overflow-hidden">
+                <div className="h-36 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/50" />
                     <button
                         onClick={onClose}
@@ -37,7 +37,7 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                     <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-end -mt-16 mb-6 gap-4">
                         <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4">
                             <div className="relative group/avatar">
-                                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl blur-2xl opacity-60 group-hover/avatar:opacity-80 transition-opacity" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-2xl opacity-40 group-hover/avatar:opacity-60 transition-opacity" />
                                 <img
                                     src={employee.photoUrl || `https://ui-avatars.com/api/?name=${employee.name}&background=random`}
                                     alt={employee.name}
@@ -45,10 +45,10 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                 />
                                 <div className="absolute -bottom-2 -right-2 z-20">
                                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-lg ${employee.attendance >= 90
-                                            ? 'bg-gradient-to-br from-green-500 to-emerald-400'
+                                            ? 'bg-emerald-500'
                                             : employee.attendance >= 75
-                                                ? 'bg-gradient-to-br from-yellow-500 to-amber-400'
-                                                : 'bg-gradient-to-br from-red-500 to-pink-400'
+                                                ? 'bg-yellow-500'
+                                                : 'bg-red-500'
                                         }`}>
                                         <Award className="w-4 h-4 text-white" />
                                     </div>
@@ -120,8 +120,8 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-200 group">
-                                        <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                                            <MapPin className="w-4 h-4 text-accent" />
+                                        <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
+                                            <MapPin className="w-4 h-4 text-cyan-400" />
                                         </div>
                                         <div>
                                             <p className="text-xs text-gray-500">Class</p>
@@ -151,10 +151,10 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                                     <div className="w-full bg-gray-700/50 rounded-full h-3 overflow-hidden border border-white/10">
                                         <div
                                             className={`h-3 rounded-full transition-all duration-500 ${employee.attendance >= 90
-                                                    ? 'bg-gradient-to-r from-green-500 to-emerald-400'
+                                                    ? 'bg-emerald-500'
                                                     : employee.attendance >= 75
-                                                        ? 'bg-gradient-to-r from-yellow-500 to-amber-400'
-                                                        : 'bg-gradient-to-r from-red-500 to-pink-400'
+                                                        ? 'bg-yellow-500'
+                                                        : 'bg-red-500'
                                                 }`}
                                             style={{ width: `${employee.attendance}%` }}
                                         />
@@ -164,14 +164,14 @@ const EmployeeDetail: React.FC<EmployeeDetailProps> = ({ employee, onClose, onEd
                         </div>
 
                         <div className="space-y-6">
-                            <div className="p-5 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-4 h-full backdrop-blur-sm hover:border-warning/30 transition-colors">
+                            <div className="p-5 rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 space-y-4 h-full backdrop-blur-sm hover:border-cyan-500/30 transition-colors">
                                 <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
                                     <BookOpen className="w-4 h-4 text-warning" />
                                     Academic Details
                                 </h3>
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3 text-gray-200">
-                                        <Calendar className="w-4 h-4 text-purple-400" />
+                                        <Calendar className="w-4 h-4 text-blue-400" />
                                         <span className="text-sm">
                                             <span className="text-gray-500">Age:</span>{' '}
                                             <span className="font-medium">{employee.age} years</span>

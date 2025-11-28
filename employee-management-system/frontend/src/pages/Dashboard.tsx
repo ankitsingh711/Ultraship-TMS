@@ -8,7 +8,6 @@ import EmployeeDetail from '../components/Employee/EmployeeDetail';
 import Filters from '../components/Employee/Filters';
 import Pagination from '../components/Employee/Pagination';
 import ViewToggle from '../components/Employee/ViewToggle';
-import AddEmployeeModal from '../components/Employee/AddEmployeeModal';
 import type { Employee, EmployeeFilter } from '../types';
 import { useAuth } from '../context/AuthContext';
 import StatsGrid from '../components/Dashboard/StatsGrid';
@@ -54,7 +53,6 @@ const Dashboard = () => {
     const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
     const [page, setPage] = useState(1);
     const [filter, setFilter] = useState<EmployeeFilter>({});
-    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
     const { isAdmin } = useAuth();
     const itemsPerPage = 10;

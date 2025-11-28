@@ -27,7 +27,7 @@ const HorizontalMenu = () => {
                     <div className="flex items-center gap-2 sm:gap-4">
                         <HamburgerMenu />
                         <div className="flex-shrink-0">
-                            <span className="text-lg sm:text-2xl font-bold text-gradient-vibrant">EMS Portal</span>
+                            <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">EMS Portal</span>
                         </div>
                         <nav className="hidden lg:flex items-center space-x-2 ml-8">
                             <a href="#" className="text-white px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 bg-primary/10 border border-primary/20 shadow-sm shadow-primary/20 relative overflow-hidden group">
@@ -58,7 +58,7 @@ const HorizontalMenu = () => {
 
                         <button className="btn-icon relative group">
                             <Bell className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                            <span className="absolute top-1 right-1 w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+                            <span className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                         </button>
 
                         {/* Profile Dropdown */}
@@ -71,7 +71,7 @@ const HorizontalMenu = () => {
                                     <p className="text-xs font-semibold text-white">{user?.email.split('@')[0]}</p>
                                     <p className="text-[10px] text-gray-400 capitalize">{user?.role}</p>
                                 </div>
-                                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
+                                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
                                     {user?.email[0].toUpperCase()}
                                 </div>
                                 <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${isProfileOpen ? 'rotate-180' : ''}`} />

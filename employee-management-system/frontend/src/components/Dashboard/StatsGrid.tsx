@@ -11,7 +11,7 @@ interface StatsCardProps {
 
 const StatsCard: React.FC<StatsCardProps> = ({ title, value, change, icon, gradient }) => {
     return (
-        <div className="glass-panel p-8 hover:scale-105 transition-all duration-300 hover:shadow-2xl group relative overflow-hidden">
+        <div className="glass-panel p-6 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl group relative overflow-hidden rounded-xl">
             {/* Background gradient glow */}
             <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
@@ -50,28 +50,28 @@ const StatsGrid: React.FC<StatsGridProps> = ({ totalEmployees, averageAttendance
             value: totalEmployees,
             change: '+12%',
             icon: <Users className="w-5 h-5 text-white" />,
-            gradient: 'from-indigo-500 to-purple-600'
+            gradient: 'from-blue-500 to-blue-600'
         },
         {
             title: 'Average Attendance',
             value: `${averageAttendance}%`,
             change: '+5%',
             icon: <Clock className="w-5 h-5 text-white" />,
-            gradient: 'from-green-500 to-emerald-600'
+            gradient: 'from-emerald-500 to-emerald-600'
         },
         {
             title: 'Departments',
             value: '8',
             change: '+2',
             icon: <Award className="w-5 h-5 text-white" />,
-            gradient: 'from-pink-500 to-rose-600'
+            gradient: 'from-cyan-500 to-cyan-600'
         },
         {
             title: 'Performance',
             value: '94%',
             change: '+8%',
             icon: <TrendingUp className="w-5 h-5 text-white" />,
-            gradient: 'from-cyan-500 to-blue-600'
+            gradient: 'from-teal-500 to-teal-600'
         }
     ];
 
