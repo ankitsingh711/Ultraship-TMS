@@ -103,9 +103,9 @@ const Dashboard = () => {
         <div className="min-h-screen bg-background pb-12">
             <HorizontalMenu />
 
-            <main className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+            <main className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6 animate-fade-in">
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8 animate-fade-in">
                     <div>
                         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
                             <span className="text-gradient-vibrant">Employee Directory</span>

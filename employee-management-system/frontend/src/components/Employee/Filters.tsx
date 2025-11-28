@@ -19,8 +19,8 @@ const Filters: React.FC<FiltersProps> = ({ filter, onFilterChange }) => {
     const hasFilters = Object.values(filter).some(v => v !== undefined);
 
     return (
-        <div className="glass-panel-light p-5 mb-6 shadow-lg border border-white/10 animate-slide-in-right">
-            <div className="flex items-center gap-2 mb-4">
+        <div className="glass-panel-light p-6 mb-8 shadow-lg border border-white/10 animate-slide-in-right">
+            <div className="flex items-center gap-2 mb-5">
                 <SlidersHorizontal className="w-5 h-5 text-primary" />
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Filters</h3>
                 {hasFilters && (
@@ -30,7 +30,7 @@ const Filters: React.FC<FiltersProps> = ({ filter, onFilterChange }) => {
                 )}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-3">
+            <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1 relative group">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4 transition-colors group-focus-within:text-primary" />
                     <input
@@ -42,7 +42,7 @@ const Filters: React.FC<FiltersProps> = ({ filter, onFilterChange }) => {
                     />
                 </div>
 
-                <div className="flex gap-3 overflow-x-auto pb-2 md:pb-0">
+                <div className="flex gap-4 overflow-x-auto pb-2 md:pb-0">
                     <div className="relative">
                         <select
                             className="input-field min-w-[160px] appearance-none cursor-pointer pr-10"
